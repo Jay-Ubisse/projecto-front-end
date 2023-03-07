@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microcontroladores | Binario Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4b43862993.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/styles/output.css">
+    <script src="../assets/scrips/js/jquery-3.6.1.js"></script>
+    <script src="../assets/scrips/js/global.js"></script>
+</head>
+
+<body>
+    <header>
+        <!--Laptop header-->
+        <div class="laptop:block mobile:hidden">
+            <section class="bg-blue-binario text-white text-2xs font-ligth py-2 px-4 flex flex-row justify-between">
+                <div>
+                    <span><i class="fa-solid fa-truck-fast"></i></span>
+                    <span class="ml mobile:text-2xs">Entregas grátis para pedidos acima de 1.000,00 MT</span>
+                </div>
+                <div class=" underline flex flex-row gap-4">
+                    <span><a href="#">Sobre</a></span>
+                    <span><a href="#">Contacto</a></span>
+                    <span><a href="#">Central de ajuda</a></span>
+                    <span>Ligue-nos +258 84 883 9501</span>
+                </div>
+            </section>
+            <section class="bg-white pl-4 pr-12 py-3 flex flex-row justify-between">
+                <div class="flex flex-row items-center gap-12">
+                    <div>
+                        <h1 class="text-lg font-regular"><span class="text-blue-binario">Binario <span
+                                    class="text-white bg-blue-binario rounded-lg px-3 py-1 text-base">Store</span></h1>
+                    </div>
+                    <div class="h-fit flex flex-row gap-0">
+                        <input type="search" name="search" size="15"
+                            class="bg-gray-binario rounded-tl-2xl rounded-bl-2xl focus:outline-blue-binario px-2 text-2xs text-slate-800">
+                        <button class="bg-blue-binario text-white px-4 rounded-tr-2xl rounded-br-2xl"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="text-black text-2xs font-ligth flex flex-row gap-4 items-center">
+                    <div>
+                        <a href="#">
+                            <span><i class="fa-regular fa-user fa-xl"></i></span>
+                            <span>Login</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <span><i class="fa-solid fa-cart-shopping fa-xl"></i></i></span>
+                            <span class="bg-[#2B2D42] rounded-full py-1 px-2 text-white">0</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-gray-binario h-fit px-8 py-3 text-xs font-regular">
+                <ul class="flex flex-row justify-between">
+                    <li class="hover:text-blue-binario"><a href="../">Pagina Inicial</a></li>
+                    <li class="hover:text-blue-binario"><a href="../microcontrollers/">Microcontroladores</a></li>
+                    <li class="hover:text-blue-binario"><a href="">Contadores e Registradores</a></li>
+                    <li class="hover:text-blue-binario"><a href="">Displays e LED's</a></li>
+                    <li class="hover:text-blue-binario"><a href="">Acessorios Arduino</a></li>
+                    <li class="hover:text-blue-binario"><a href="">Componentes Discretos</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <!--Mobile header-->
+        <div class="laptop:hidden mobile:block relative">
+            <!--Free delivery section-->
+            <section class="bg-blue-binario text-white text-2xs font-ligth py-2">
+                <div>
+                    <span><i class="fa-solid fa-truck-fast"></i></span>
+                    <span class="text-2xs">Entregas grátis para pedidos acima de 1.000,00 MT</span>
+                </div>
+            </section>
+
+            <!--logo and menu section-->
+            <section class="bg-white px-2 py-3 flex flex-row justify-between">
+                <div>
+                    <h1 class="text-lg font-regular"><span class="text-blue-binario">Binario <span
+                                class="text-white bg-blue-binario rounded-lg px-3 py-1 text-base">Store</span></h1>
+                </div>
+                <div class="flex flex-row gap-4">
+                    <div>
+                        <a href="#">
+                            <span><i class="fa-solid fa-cart-shopping fa-xl"></i></i></span>
+                            <span class="bg-[#2B2D42] rounded-full py-1 px-2 text-white">0</span>
+                        </a>
+                    </div>
+                    <div id="openMenu">
+                        <span><i class="fa-solid fa-bars fa-2x"></i></span>
+                    </div>
+                </div>
+            </section>
+
+            <!--search section-->
+            <section class="bg-white">
+                <div class="h-fit w-fit flex flex-row gap-0 mx-auto py-5">
+                    <input type="search" name="search" size="20"
+                        class="bg-gray-binario rounded-tl-2xl rounded-bl-2xl focus:outline-blue-binario px-2 py-2 text-2xs text-slate-800">
+                    <button class="bg-blue-binario text-white px-6 rounded-tr-2xl rounded-br-2xl"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </section>
+
+            <!--menu items section-->
+            <section id="menu"
+                class="bg-gray-binario py-3 px-0 text-xs font-regular absolute top-0 min-h-screen w-screen">
+                <div class="flex flex-row justify-between px-5 my-7">
+                    <div>
+                        <a href="#">
+                            <span><i class="fa-regular fa-user fa-2x"></i></span>
+                            <span class="text-base">Login</span>
+                        </a>
+                    </div>
+                    <div id="closeMenu">
+                        <span><i class="fa-solid fa-xmark fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="underline text-xs grid grid-cols-2 gap-4 px-4 py-4">
+                    <span><a href="#">Sobre</a></span>
+                    <span><a href="#">Contacto</a></span>
+                    <span><a href="#">Central de ajuda</a></span>
+                    <span>Ligue-nos +258 84 883 9501</span>
+                </div>
+                <ul class="flex flex-col justify-between bg-gray-400 mt-3 w-screen">
+                    <li class="py-4 px-4 text-center border-b"><a href="">Pagina Inicial</a></li>
+                    <li class="py-4 px-4 text-center border-b"><a href="">Microcontroladores</a></li>
+                    <li class="py-4 px-4 text-center border-b"><a href="">Contadores e Registradores</a></li>
+                    <li class="py-4 px-4 text-center border-b"><a href="">Displays e LED's</a></li>
+                    <li class="py-4 px-4 text-center border-b"><a href="">Acessórios Arduino</a></li>
+                    <li class="py-4 px-4 text-center"><a href="">Componentes Discretos</a></li>
+                </ul>
+            </section>
+        </div>
+    </header>
+    <main class="laptop:flex laptop:flex-row gap-4">
+        <aside>
+            <div class="w-fit bg-gray-binario p-5 mt-3 ml-3">
+                <h1 class="text-lg my-3 pb-3 border">Filtrar</h1>
+                <section>
+                    <h2><span>Selecionar por</span> <span></span></h2>
+                    <ul>
+                        <li>Recentes</li>
+                        <li>Preço (Menor ao maior)</li>
+                        <li>Preço (Maior ao menor)</li>
+                        <li>Nome (A - Z)</li>
+                        <li>Nome (Z - A)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Microcontroladores</h2>
+                    <ul>
+                        <li>Todos</li>
+                        <li>Promoções</li>
+                        <li>Mais vendidos</li>
+                    </ul>
+                </section>
+            </div>
+        </aside>
+        <article>
+
+        </article>
+    </main>
+    <footer class="w-full mt-3 p-0 pt-1 bg-white">
+        <section class="w-[98%] mx-auto mt-6 flex 
+                    laptop:flex-row laptop:justify-around
+                    mobile:flex-col mobile:gap-5 mobile:pl-7
+    ">
+            <div>
+                <h1 class="text-black font-bold laptop:text-lg">Contacto</h1>
+                <p class="text-[#212529] font-regular laptop:text-xs">info@store.binario.com</p>
+                <p class="text-[#212529] font-regular laptop:text-xs">(258) 84 883 9501</p>
+                <div class="flex flex-row gap-3">
+                    <div><i class="fa-brands fa-facebook fa-lg"></i></div>
+                    <div><i class="fa-brands fa-square-instagram fa-lg"></i></div>
+                    <div><i class="fa-brands fa-twitter fa-lg"></i></div>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-black font-bold laptop:text-lg">Suporte ao cliente</h1>
+                <p class="text-[#212529] font-regular laptop:text-xs">Central de ajuda</p>
+                <p class="text-[#212529] font-regular laptop:text-xs">Sobre nos</p>
+            </div>
+            <div>
+                <h1 class="text-black font-bold laptop:text-lg">Politica</h1>
+                <p class="text-[#212529] font-regular laptop:text-xs">Entregas e devoluções</p>
+                <p class="text-[#212529] font-regular laptop:text-xs">Termos e Condições</p>
+                <p class="text-[#212529] font-regular laptop:text-xs">Métodos de pagamento</p>
+                <p class="text-[#212529] font-regular laptop:text-xs">Politica de cookies</p>
+                <p class="text-[#212529] font-regular laptop:text-xs">FAQ</p>
+            </div>
+        </section>
+        <section class="w-[90%] mx-auto border-t border-[#212529] text-center mt-3 pt-3 min-h-[200px]">
+            <p class="text-[#212529] font-regular laptop:text-xs">Métodos de pagamento</p>
+        </section>
+        <section class="bg-gray-binario py-4 text-center font-regular laptop:text-xs mobile:text-2xs">
+            <p>&copy; 2022 Binario. Todos os direitos reservados. </p>
+        </section>
+    </footer>
+</body>
+
+</html>
